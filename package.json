@@ -19,6 +19,10 @@
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "angular2-materialize": "^15.1.10",
+    "bootstrap": "^5.0.0-alpha1",
+    "jquery": "^3.5.1",
+    "materialize-css": "^1.0.0-rc.2",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

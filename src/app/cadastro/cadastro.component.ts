@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-cadastro',
+  templateUrl: './cadastro.component.html',
+  styleUrls: ['./cadastro.component.css']
 })
-export class AppComponent {
-  title = 'projeto-intcom';
+export class CadastroComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }
 
 let outDB,
@@ -24,7 +28,7 @@ const dbName = 'myMaquinaDB',
 
 const createDB = () => {
   if(window.indexedDB){
-    const request = window.indexedDB.open('maquinasDB', 3); 
+    const request = window.indexedDB.open('maquinasDB', 1); 
     
     request.onerror = (event) => {
       console.log('Error request', event);
@@ -40,13 +44,12 @@ const createDB = () => {
     }
 
     request.onupgradeneeded = (event) => {
-        console.log('Upgraded request', event)
         outDB.innerHTML = 'upgraded request';
       
       
       //let db = event.target.result;
 
-      //let objectStoreMaquina = db.createObjectStoreMaquina(storeName,)
+      let objectStoreMaquina = db.createObjectStoreMaquina(storeName,)
     }
 
     let objectStoreMaquina = db.createObjectStoreMaquina('storeName',

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "projeto-intcom"
+    }
+  },
+  "defaultProject": "projeto-intcom",
+  "cli": {
+    "analytics": "3ad6aba9-a544-413f-b278-8f3edffee605"
+  }
 }
